@@ -1,0 +1,30 @@
+[
+    {
+    "id": 0,
+    "name": "Borgor", 
+    "src": "https://www.heidiswapp.com/wp-content/uploads/woocommerce-placeholder-256x256.png",
+    "alt": "product image",
+    "price": 19.99
+},
+{
+    "id": 1,
+    "name": "Vibeo Gane", 
+    "src": "https://www.heidiswapp.com/wp-content/uploads/woocommerce-placeholder-256x256.png",
+    "alt": "product image",
+    "price": 44.99
+},
+{
+    "id": 2,
+    "name": "Cat Net", 
+    "src": "https://www.heidiswapp.com/wp-content/uploads/woocommerce-placeholder-256x256.png",
+    "alt": "A net for cats",
+    "price": 10.39
+},
+{
+    "id": 3,
+    "name": "Nic Salts", 
+    "src": "https://www.heidiswapp.com/wp-content/uploads/woocommerce-placeholder-256x256.png",
+    "alt": "50mg nic salts",
+    "price": 12.00
+}
+]

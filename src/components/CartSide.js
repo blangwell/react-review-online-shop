@@ -3,7 +3,7 @@ import CardProductSm from './CartProductSm';
 
 export default function CartSide(props) {
     const cartProducts = props.inCart.length > 0 ? 
-        props.inCart.map(prod => <CardProductSm product={prod} key={prod.id}/>) :
+        props.inCart.map((prod, idx) => <CardProductSm product={prod} key={idx} dispatchCart={props.dispatchCart}/>) :
         <p>Nothing in Cart</p> 
 
     return (

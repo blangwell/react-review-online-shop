@@ -1,4 +1,4 @@
-import {CART_ACTIONS} from '../App';
+import { CART_ACTIONS } from '../App';
 
 export default function ProductCard(props) {
 	const cardStyles = {
@@ -19,7 +19,7 @@ export default function ProductCard(props) {
 				style={{width: "100%", maxHeight: "60%"}}
 			/>
 			<h1>{props.product.name}</h1>
-			<h3>{props.product.price}</h3>
+			<h3>${props.product.price}</h3>
 			<button 
 				onClick={() => props.dispatchCart({ type: CART_ACTIONS.ADD, payload: {product: props.product} })}>Add to Cart</button>
 		</div>

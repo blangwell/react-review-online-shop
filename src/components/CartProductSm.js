@@ -1,4 +1,5 @@
 import QuantitySelector from "./QuantitySelector";
+import { CART_ACTIONS } from "../App";
 
 export default function CartProduct(props) {
     return (
@@ -21,6 +22,13 @@ export default function CartProduct(props) {
             />
             <h3>{props.product.name}</h3>
             <p>{props.product.price}</p>
+            <p>{props.product.quantity}</p>
+            <button 
+                onClick={
+                () => props.dispatchCart({ 
+                    type: CART_ACTIONS.REMOVE, payload: { 
+                        product: props.product 
+                }})}>X</button>
             <QuantitySelector />
         </div>
     )

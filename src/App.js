@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer, useCallback } from 'react';
+import { useState, useReducer } from 'react';
 import './App.css';
 import ProductCard from './components/ProductCard';
 import CartSide from './components/CartSide';
@@ -48,12 +48,9 @@ function addProductToCart(prod) {
 
 function App() {
 	const [inCart, dispatchCart] = useReducer(cartReducer, [])
-	const [products, setProducts] = useState([...productData]);
 	const [showCart, setShowCart] = useState(false);
 
-	// useEffect(() => {
-	// 	setProducts(productData);
-	// }, [products]);
+	const products = [...productData];
 
 	const productDisplay = products ? products.map((prod, idx) => {
 		return <ProductCard product={prod} key={idx} dispatchCart={dispatchCart} />

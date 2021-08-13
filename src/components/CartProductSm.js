@@ -1,5 +1,13 @@
 import QuantitySelector from "./QuantitySelector";
 import { CART_ACTIONS } from "../App";
+// import { makeStyles } from '@material-ui/core/styles';
+import Button from "@material-ui/core/Button"
+// import Card from '@material-ui/core/Card';
+// import CardActionArea from '@material-ui/core/CardActionArea';
+// import CardActions from '@material-ui/core/CardActions';
+// import CardContent from '@material-ui/core/CardContent';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import Typography from '@material-ui/core/Typography';
 
 export default function CartProduct(props) {
     return (
@@ -23,13 +31,18 @@ export default function CartProduct(props) {
             <h3>{props.product.name}</h3>
             <p>{props.product.price}</p>
             <p>{props.product.quantity}</p>
-            <button 
+            <Button 
+                variant="outlined"
+                color="secondary"
                 onClick={
                 () => props.dispatchCart({ 
                     type: CART_ACTIONS.REMOVE, payload: { 
                         product: props.product 
-                }})}>X</button>
+                }})}>X</Button>
             <QuantitySelector />
         </div>
     )
 }
+
+
+

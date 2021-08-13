@@ -6,8 +6,9 @@ export default function CartSide(props) {
         props.inCart.map((prod, idx) => <CardProductSm product={prod} key={idx} dispatchCart={props.dispatchCart}/>) :
         <p>Nothing in Cart</p> 
 
+        
     return (
-        <div>
+        <div className="animate__animated animate__slideInRight">
             <h1>Your Cart</h1>
             {cartProducts}
         </div>
